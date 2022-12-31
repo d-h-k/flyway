@@ -9,7 +9,11 @@
 docker run --name mysql-dock -e MYSQL_ROOT_PASSWORD=1234 -d -p 23306:3306 mysql
 ```
 - 컨피그파일은 app.yaml 파일의 dev 컨피그로
-
+- 한가지 중대한 문제점
+```text
+FlywayException: Unsupported Database: MySQL 8.0
+```
+- 노르웨이영토인 북해에 위치한 스벨바르제도가 떠오른다..
 
 
 

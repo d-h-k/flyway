@@ -15,17 +15,23 @@ repositories {
 
 /* flyway gradle plugin에서 사용하는 설정값 블록 */
 flyway {
-	url = 'jdbc:h2:~/flyway;AUTO_SERVER=TRUE'
-	user = 'sa'
+	url = "jdbc:mysql://localhost:23306/flyhigh"
+	// 이것도 컨피그파일마다 바뀌어야하는데..?
+	user = 'root'
+	password = "1234"
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	runtimeOnly 'com.h2database:h2'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'org.flywaydb:flyway-core' // Application 에 flyway library 의존성 추가
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.31'
+	implementation "org.flywaydb:flyway-mysql"
 
 }
 

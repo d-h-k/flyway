@@ -1,10 +1,28 @@
+server:
+  port: 8080
+
 spring:
-  config:
-    activate:
-      on-profile: dev
 
   #profiles:
     #active: dev # local profile 사용하기 위한 설정
 
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:23306/flyhigh
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   flyway:
-    enabled: true # 운영환경에서 flyway가 동작하는 것을 방지하기 위하여 false로 설정
+    #enabled: true #false # true # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
+    enabled: false
+    #baseline-on-migrate: true
+
+  jpa:
+    hibernate:
+      #ddl-auto: create
+      ddl-auto: validate
+
