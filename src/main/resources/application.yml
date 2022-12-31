@@ -6,6 +6,7 @@ spring:
     console:
       enabled: true
 
+
   datasource:
     url: jdbc:h2:~/flyway;AUTO_SERVER=TRUE
     username: sa
@@ -13,5 +14,11 @@ spring:
     driver-class-name: org.h2.Driver
 
   flyway:
-    enabled: true # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
+    enabled: true #false # true # 기본값 = true 이지만, flyway를 사용하고 있음을 명시해줍니다.
+    #enabled: false
+    #baseline-on-migrate: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
 
