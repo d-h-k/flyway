@@ -1,5 +1,21 @@
 # YOUTHCON'22 - Flyway로 DB 형상관리 시작하기
 
+--------
+
+## 나의 실습 추가
+
+- 도커로 간단하게 디비셋팅
+```sql
+docker run --name mysql-dock -e MYSQL_ROOT_PASSWORD=1234 -d -p 23306:3306 mysql
+```
+- 컨피그파일은 app.yaml 파일의 dev 컨피그로
+
+
+
+
+--------
+
+
 ## :pushpin: 실습 진행 환경
 
 - Java 11
@@ -294,3 +310,6 @@ DELETE FROM "flyway_schema_history" WHERE "version" = 3;
 
 아래 블로그에 Flyway CLI Tool을 설치하고, 간단히 사용하는 방법을 정리해두었으니 참고해주세요.
 https://devcamus.tistory.com/29
+
+
+
