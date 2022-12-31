@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: local # local profile 사용하기 위한 설정
+
+flyway:
+  enabled: false # 운영환경에서 flyway가 동작하는 것을 방지하기 위하여 false로 설정
