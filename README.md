@@ -1,5 +1,8 @@
 # YOUTHCON'22 - Flyway로 DB 형상관리 시작하기
 
+- 원작자 repo : https://github.com/devcsb/flyway
+- 
+
 --------
 
 ## 나의 실습 추가
@@ -13,8 +16,9 @@ docker run --name mysql-dock -e MYSQL_ROOT_PASSWORD=1234 -d -p 23306:3306 mysql
 ```text
 FlywayException: Unsupported Database: MySQL 8.0
 ```
-- 노르웨이영토인 북해에 위치한 스벨바르제도가 떠오른다..
-
+- 플러그인 있어서 쉽게 활용가능함
+- 하다가 좀 이상이 생기면 그냥 rebase 때리거나 /// 혹은 (형상관리전용)데이터베이스를 삭제하면 해결가능
+- 데이터베이스 테이블구조 변경을 히스토리남길수 있고, 코드와 DB 가 안맞아서 문제생기는 경우가 많은데, 이런 경우에 
 
 
 --------
